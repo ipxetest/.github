@@ -1,0 +1,46 @@
+name: Bug Report
+description: File a bug report.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: checkboxes
+    attributes:
+      label: Is this really a bug?
+      description: Please use discussions before creating an issue
+      options:
+      - label: I'm sure this is a bug
+        required: true
+  - type: checkboxes
+    attributes:
+      label: Is there an existing issue for this?
+      description: Please search to see if an issue or discussion already exists.
+      options:
+      - label: I have searched and found nothing matching
+        required: true
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    id: gitcommit
+    attributes:
+      label: Git commit
+      description: | 
+        The commit used when the issue occured, we will probably want you to verify with current git master as well.
+        Tip: iPXEs version by default contains the git id prefixed with "g" in the version string, please verify this commit in the repo
+      placeholder: commit id
+    validations:
+      required: true
+  - type: textarea
+    id: errorurls
+    attributes:
+      label: ipxe.org URLs in message
+      description: URLs in Error message (ipxe.org/xxx if available) all iPXE erors contains these URLs with more info
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Description
+      description: Tell us the problem
+    validations:
+      required: true
+
