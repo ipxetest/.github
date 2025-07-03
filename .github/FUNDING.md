@@ -1,1 +1,1 @@
-github: [mcb30, nikize]
+github: [mcb30]
